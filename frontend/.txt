@@ -1,0 +1,37 @@
+ {/* Input and Buttons */}
+                <div className="input-buttons-container">
+                  {/* Input */}
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      placeholder="Ex: Tokyo, Brasil, New York..."
+                      value={guess}
+                      onChange={(e) => setGuess(e.target.value)}
+                  
+                      className="guess-input"
+                    />
+                    <div className="input-icon">
+                      🌍
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="buttons-container">
+                    <button 
+                      onClick={makeGuess}
+                      disabled={!guess.trim()}
+                      className="guess-button"
+                    >
+                      <span>🎯</span>
+                      Tentar
+                    </button>
+
+                    <button
+                      onClick={fetchRandomImage}
+                      className="next-button"
+                    >
+                      <span>🎲</span>
+                      Próxima
+                    </button>
+                  </div>
+                </div>

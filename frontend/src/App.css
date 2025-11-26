@@ -1,0 +1,217 @@
+/* Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* App principal - NOVO FUNDO CLARO */
+.app {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #0f1419 0%, #1a2d1a 50%, #2d4a2d 100%);
+  color: #f0f8f0;
+}
+
+/* Background animado - VERSÃO CLARA */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 20s infinite ease-in-out;
+  opacity: 0.6; /* Mais sutil */
+}
+
+.gradient-orb-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #4a7c59, #6b8e6b); /* Verde escuro */
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.gradient-orb-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #8b7355, #a68a5c); /* Marrom */
+  top: 60%;
+  right: 20%;
+  animation-delay: -7s;
+}
+
+.gradient-orb-3 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg, #5d7a3a, #4a5d2a); /* Verde musgo */
+  bottom: 20%;
+  left: 50%;
+  animation-delay: -14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-30px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(20px) rotate(240deg);
+  }
+}
+
+/* Header - VERSÃO CLARA */
+.app-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.header-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 3rem;
+  animation: pulse 2s infinite;
+  color: #4a7c59; /* Verde escuro */
+}
+
+.logo-text {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #4a7c59, #6b8e6b, #8b7355);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #a8b8a8; /* Verde claro */
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Main content */
+.app-main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Footer - VERSÃO CLARA */
+.app-footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+}
+
+.app-footer p {
+  color: #a8b8a8; /* Verde claro */
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 2.5rem;
+  }
+  
+  .logo-icon {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .app-main {
+    padding: 1rem 0.5rem;
+  }
+  
+  .gradient-orb {
+    filter: blur(60px);
+  }
+  
+  .gradient-orb-1 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .gradient-orb-2 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gradient-orb-3 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,147 @@
+
+
+.start-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 28px;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #4a7c59, #3a5d3a);
+  color: #ffffff;
+
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+
+  box-shadow: 0 10px 24px rgba(74, 124, 89, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(74, 124, 89, 0.45);
+  filter: brightness(1.05);
+}
+
+.start-button:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(74, 124, 89, 0.35);
+  filter: brightness(0.98);
+}
+
+.start-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.35), 0 10px 24px rgba(74, 124, 89, 0.35);
+}/* Layout base para centralizar a tela */
+html, body, #root {
+    height: 100%;
+  }
+  .start-image-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .start-image-container img {
+    width: 300px;  /* ajuste para o tamanho desejado */
+    height: auto;  /* mantém proporção */
+    max-width: 100%; /* responsivo */
+    border-radius: 12px;
+  }
+  
+  
+  
+  body {
+    margin: 0;
+    background: radial-gradient(1200px 800px at 50% -10%, #2d4a2d 0%, #0f1419 60%);
+    color: #f0f8f0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Centraliza o conteúdo do Startscreen */
+  #root > div {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+  }
+  
+  /* Card visual para o container principal (seu <div>) */
+  #root > div > div {
+    position: relative;
+    width: min(800px, 92vw);
+    background: rgba(15, 20, 25, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(74, 124, 89, 0.2);
+    border-radius: 18px;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Glow do card */
+  #root > div > div::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #4a7c59, #6b8e6b, #8b7355);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0.25;
+    filter: blur(8px);
+  }
+  
+  /* Título */
+  #root > div > div > h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Botão */
+  #root > div > div > button {
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4a7c59, #3a5d3a);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+  }
+  
+  #root > div > div > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+    filter: brightness(1.05);
+  }
+  
+  #root > div > div > button:active {
+    transform: translateY(0);
+  }
+  
+  /* Dica/responsividade */
+  @media (max-width: 768px) {
+    #root > div > div {
+      padding: 1.5rem;
+    }
+   /* Botão primário (Iniciar Jogo) */
+
+  }
+  
