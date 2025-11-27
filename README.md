@@ -211,20 +211,9 @@ GMaps/
    npm run install-all
    ```
    Este comando instala as dependências do projeto raiz, frontend e backend.
-
-3. **Configure as variáveis de ambiente**
-
-   No arquivo `Backend/.env`:
-   ```env
-   GOOGLE_MAPS_API_KEY=sua_chave_aqui
    ```
 
-   No arquivo `frontend/public/index.html`, adicione sua chave da API do Google Maps:
-   ```html
-   <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_AQUI&libraries=places"></script>
-   ```
-
-4. **Configure o serviço PHP**
+3. **Configure o serviço PHP**
    - Certifique-se de que o serviço PHP está rodando em `http://localhost/cities.php`
    - O serviço deve retornar um JSON com array de cidades no formato:
      ```json
@@ -288,14 +277,8 @@ npm run build
 ## 📝 Notas Adicionais
 
 - O projeto requer uma chave válida da Google Maps API
-- O serviço PHP externo é necessário para fornecer a lista de cidades
+- O serviço PHP + Banco de dados externo é necessário para fornecer a lista de cidades e ranking
 - Certifique-se de que o CORS está configurado corretamente no backend
-- O banco de dados MySQL é usado apenas para armazenar o ranking
 
-## 📄 Licença
 
-Este projeto está sob a licença ISC.
 
----
-
-Desenvolvido com ❤️ usando React e Node.js
